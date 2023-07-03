@@ -104,9 +104,9 @@ class Rectangle:
 
     def __repr__(self):
         """Return the string representation of the rectangle."""
-    return f"Rectangle({self._width}, {self._height})"
+        return f"Rectangle({self._width}, {self._height})"
 
-def __del__(self):
-    """Print a message for every deletion of a rectangle."""
-    type(self).number_of_instances -= 1
-    print("Bye rectangle...")
+    def __del__(self):
+        """Print a message for every deletion of a rectangle."""
+        type(self).number_of_instances -= 1
+        print("Bye rectangle...")
