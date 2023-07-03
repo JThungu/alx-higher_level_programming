@@ -2,7 +2,7 @@
 """This script defines a class called Rectangle that represents a rectangle."""
 
 class Rectangle:
-    """This class represents a rectangle."""
+    """Represent a rectangle."""
 
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle.
@@ -23,9 +23,9 @@ class Rectangle:
     def width(self, value):
         if not isinstance(value, int):
             raise TypeError("Width must be an integer.")
-    if value < 0:
-        raise ValueError("Width must be greater than or equal to 0.")
-    self._width = value
+        if value < 0:
+            raise ValueError("Width must be greater than or equal to 0.")
+        self._width = value
 
     @property
     def height(self):
