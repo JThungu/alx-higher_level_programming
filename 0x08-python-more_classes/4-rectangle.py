@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 """This script defines a class called Rectangle that represents a rectangle."""
 
-
 class Rectangle:
-        """This class represents a rectangle."""
-
+    """This class represents a rectangle."""
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle.
 
@@ -54,17 +52,17 @@ class Rectangle:
     def __str__(self):
         """Return the printable representation of the rectangle.
 
-    Represents the rectangle with the # character.
-    """
-    if self._width == 0 or self._height == 0:
-        return ""
+        Represents the rectangle with the # character.
+        """
+        if self._width == 0 or self._height == 0:
+            return ""
 
-    rect = []
-    for i in range(self._height):
-        [rect.append("#") for j in range(self._width)]
-        if i != self._height - 1:
-            rect.append("\n")
-    return "".join(rect)
+        rect = []
+        for i in range(self._height):
+            [rect.append("#") for j in range(self._width)]
+            if i != self._height - 1:
+                rect.append("\n")
+        return "".join(rect)
 
     def __repr__(self):
         """Return the string representation of the rectangle."""
