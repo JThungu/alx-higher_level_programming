@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""Defines a Rectangle class."""
-from models.base import BaseModel
+"""Defines a rectangle class."""
+from models.base import Base
 
-class Rectangle(BaseModel):
-    """Represents a rectangle."""
+
+class Rectangle(Base):
+    """This class represent a rectangle."""
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initialize a new Rectangle.
@@ -15,10 +16,10 @@ class Rectangle(BaseModel):
             y (int): The y coordinate of the new Rectangle.
             id (int): The identity of the new Rectangle.
         Raises:
-            TypeError: If either width or height is not an int.
-            ValueError: If either width or height is <= 0.
-            TypeError: If either x or y is not an int.
-            ValueError: If either x or y is < 0.
+            TypeError: If either of width or height is not an int.
+            ValueError: If either of width or height <= 0.
+            TypeError: If either of x or y is not an int.
+            ValueError: If either of x or y < 0.
         """
         self.width = width
         self.height = height
@@ -88,10 +89,10 @@ class Rectangle(BaseModel):
             print("")
             return
 
-        [print("") for _ in range(self.y)]
-        for _ in range(self.height):
-            [print(" ", end="") for _ in range(self.x)]
-            [print("#", end="") for _ in range(self.width)]
+        [print("") for y in range(self.y)]
+        for h in range(self.height):
+            [print(" ", end="") for x in range(self.x)]
+            [print("#", end="") for w in range(self.width)]
             print("")
 
     def update(self, *args, **kwargs):
@@ -107,20 +108,22 @@ class Rectangle(BaseModel):
             **kwargs (dict): New key/value pairs of attributes.
         """
         if args and len(args) != 0:
-            for i, arg in enumerate(args):
-                if i == 0:
+            a = 0
+            for arg in args:
+                if a == 0:
                     if arg is None:
                         self.__init__(self.width, self.height, self.x, self.y)
                     else:
                         self.id = arg
-                elif i == 1:
+                elif a == 1:
                     self.width = arg
-                elif i == 2:
+                elif a == 2:
                     self.height = arg
-                elif i == 3:
+                elif a == 3:
                     self.x = arg
-                elif i == 4:
+                elif a == 4:
                     self.y = arg
+                a += 1
 
         elif kwargs and len(kwargs) != 0:
             for k, v in kwargs.items():
@@ -153,4 +156,3 @@ class Rectangle(BaseModel):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                                                        self.x, self.y,
                                                        self.width, self.height)
-

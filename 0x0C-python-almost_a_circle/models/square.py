@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""Defines a Square class."""
+"""Defines a square class."""
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
-    """Represents a square."""
+    """Thi class represent a square."""
 
     def __init__(self, size, x=0, y=0, id=None):
         """Initialize a new Square.
@@ -38,18 +39,20 @@ class Square(Rectangle):
             **kwargs (dict): New key/value pairs of attributes.
         """
         if args and len(args) != 0:
-            for i, arg in enumerate(args):
-                if i == 0:
+            a = 0
+            for arg in args:
+                if a == 0:
                     if arg is None:
                         self.__init__(self.size, self.x, self.y)
                     else:
                         self.id = arg
-                elif i == 1:
+                elif a == 1:
                     self.size = arg
-                elif i == 2:
+                elif a == 2:
                     self.x = arg
-                elif i == 3:
+                elif a == 3:
                     self.y = arg
+                a += 1
 
         elif kwargs and len(kwargs) != 0:
             for k, v in kwargs.items():
