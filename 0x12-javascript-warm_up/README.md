@@ -1,5 +1,5 @@
 # Alx 0x12 - JavaScript Warm-up
-- by dev nderitu
+- by Joseph Thungu
 - weight: 1
 
 welcome to the alx 0x12 javascript warm-up repository! this repository contains a collection of javascript exercises designed to help you practice and improve your javascript programming skills.
