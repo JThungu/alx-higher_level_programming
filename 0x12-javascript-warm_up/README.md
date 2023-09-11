@@ -33,5 +33,5 @@ to get started with this project, follow these steps:
 1. clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/alx-0x12-javascript-warmup.git
+   git clone https://github.com/JThungu/alx-higher_level_programming
 
